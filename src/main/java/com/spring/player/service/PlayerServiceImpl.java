@@ -16,10 +16,13 @@ import com.spring.player.model.Player;
 @Transactional
 public class PlayerServiceImpl implements PlayerService {
 	
+	private PlayerDAO playerDao ;
+
 	@Autowired
-	private PlayerDAO playerDao ; 
-	   
-	
+	public PlayerServiceImpl(PlayerDAO playerDao) {
+		this.playerDao = playerDao;
+	}
+
 	public PlayerServiceImpl() {
 	}
 
