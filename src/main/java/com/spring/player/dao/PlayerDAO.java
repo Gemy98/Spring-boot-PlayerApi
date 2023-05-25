@@ -10,15 +10,17 @@ import java.util.List;
 
 public interface PlayerDAO extends JpaRepository<Player, Integer> {
 
-	/*
-	public List<Player> getPlayers();
-	
-	public void addPlayers(Player player);
-	
-	public Player getPlayer(int id);
-	
-	public void deletePlayer(Player player);
+
+    /*
+    * http://localhost:8080/     then take the name of the class and
+    * make the first character lowercase and add s at the end of
+    * Get       http://localhost:8080/players
+    * Get       http://localhost:8080/players/1
+    * Post      http://localhost:8080/players    body {object from player without id}
+    * Put       http://localhost:8080/players/id    body {object from player with id}
+    * delete    http://localhost:8080/players/id
+    *
+    * */
 
 
-	 */
 }
