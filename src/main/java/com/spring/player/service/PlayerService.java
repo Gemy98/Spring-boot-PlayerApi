@@ -13,6 +13,6 @@ public interface PlayerService {
 	public void savePlayer(Player player);
 	public Player showPlayer(int id ); 
 	
-	public void deletePlayer(Player player);
+	public void deletePlayer(int id);
 
 }

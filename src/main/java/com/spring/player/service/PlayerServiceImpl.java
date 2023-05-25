@@ -31,14 +31,14 @@ public class PlayerServiceImpl implements PlayerService {
 	public List<Player> allPlayers() {
 
 		
-		return playerDao.getPlayers();
+		return playerDao.findAll();
 	}
 
 
 	@Override
 	public void savePlayer(Player player) {
 		
-		playerDao.addPlayers(player);
+		playerDao.save(player);
 		
 	}
 
@@ -46,14 +46,13 @@ public class PlayerServiceImpl implements PlayerService {
 	@Override
 	public Player showPlayer(int id) {
 		
-		return 	playerDao.getPlayer(id);
+		return 	playerDao.getById(id);
 	}
 
 
 	@Override
-	public void deletePlayer(Player player) {
-	 playerDao.deletePlayer(player);
-		
+	public void deletePlayer(int id) {
+	 playerDao.deleteById(id);
 	}
 
 }

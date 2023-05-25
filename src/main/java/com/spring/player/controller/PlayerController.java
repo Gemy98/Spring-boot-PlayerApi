@@ -87,15 +87,15 @@ public class PlayerController {
 
 			//localhost:8080/spring-crm-rest/api/players
 			@DeleteMapping("/player")
-			public String deletePlayer(@RequestParam int id){
-				Player p = playerService.showPlayer(id);
+			public void deletePlayer(@RequestParam int id){
+				/*Player p = playerService.showPlayer(id);
 				if (p == null) {
 					throw new RuntimeException("player not found id :"+id);
 				}
+	*/
+				playerService.deletePlayer(id);
 
-				playerService.deletePlayer(p);
-
-				return "Successfully Deleted id :"+ id ;
+			//	return "Successfully Deleted id :"+ id ;
 
 			}
 
