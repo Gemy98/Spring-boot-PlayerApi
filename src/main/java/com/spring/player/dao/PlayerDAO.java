@@ -12,11 +12,11 @@ import java.util.List;
 //@RepositoryRestResource(path = "persons")
 public interface PlayerDAO extends JpaRepository<Player, Integer> {
 
-    Player findByName(@RequestParam String name);
+    Player findByName(String name);
 
     //we can make a list if the result will be more than one player :)
     Player findByNameContaining(@RequestParam String name);
-    List<Player> findAllByName(@RequestParam String name);
+    List<Player> findAllByName(String name);
 
 
     /*
