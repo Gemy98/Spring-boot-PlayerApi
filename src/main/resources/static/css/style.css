@@ -1,0 +1,17 @@
+h1
+{
+    text-align: center;
+    background-color: brown;
+    color: aliceblue;
+    padding: 10px;
+    width: 100%;
+}
+
+.table
+{
+    margin: 100px 0px 0px 0px;
+
+}
+table{
+    width: 60%;
+}
