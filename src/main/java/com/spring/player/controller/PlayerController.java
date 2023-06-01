@@ -42,6 +42,12 @@ public class PlayerController {
         return "/playerform";
     }
 
+    @GetMapping("/Remover/{id}")
+    public String RemoveP(@PathVariable int id){
+        Player p = playerService.showPlayer(id);
+        playerService.deletePlayer(p);
+        return "redirect:/players";
+    }
 
     @PostMapping("/savePlayer")
     public String savePlayer(@ModelAttribute("player") Player player){

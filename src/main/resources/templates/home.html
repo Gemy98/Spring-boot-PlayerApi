@@ -33,7 +33,7 @@
         <td th:text="${temp.phone}" ></td>
             <td>
                 <a class="mybtn btn btn-primary btn-lg active"  th:href="@{'/player-form/'+${temp.id}}">Edit Player</a>
-                <a class="mybtn btn btn-danger btn-lg active"  th:href="@{/Remover}" >Remove Player</a>
+                <a class="mybtn btn btn-danger btn-lg active"  th:href="@{'/Remover/'+${temp.id}}" >Remove Player</a>
             </td>
 
 
