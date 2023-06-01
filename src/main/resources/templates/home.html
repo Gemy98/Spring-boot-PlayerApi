@@ -19,6 +19,8 @@
         <th scope="col">Number</th>
         <th scope="col">Address</th>
         <th scope="col">Phone</th>
+        <th scope="col">Control</th>
+
     </tr>
     </thead>
     <tbody>
@@ -29,10 +31,15 @@
         <td th:text="${temp.number}"></td>
         <td th:text="${temp.address}"></td>
         <td th:text="${temp.phone}" ></td>
+            <td>
+                <a class="mybtn btn btn-primary btn-lg active"  th:href="@{'/player-form/'+${temp.id}}">Edit Player</a>
+                <a class="mybtn btn btn-danger btn-lg active"  th:href="@{/Remover}" >Remove Player</a>
+            </td>
+
 
     </tr>
     </tbody>
 </table>
-<a th:class="add"  th:href="@{/player-form}" class="btn btn-primary">Add Player</a>
+<a class="btn btn-primary btn-lg active add"  th:href="@{/player-form}" >Add Player</a>
 </body>
 </html>

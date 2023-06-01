@@ -16,6 +16,8 @@
         <div class="input-group-prepend">
             <span class="input-group-text" >@</span>
         </div>
+        <input th:field="*{id}" type="hidden" class="form-control" placeholder="id" aria-label="Username" aria-describedby="basic-addon1"/>
+
         <input th:field="*{name}" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"/>
     </div>
 
@@ -41,5 +43,8 @@
     </div>
         <button type="submit" class="btn btn-primary">Done</button>
     </form>
+    <a href="players"  class="btn btn-primary goback">Go Back</a>
+
+
 </body>
 </html>
