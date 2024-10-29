@@ -1,13 +1,13 @@
-package com.spring.player;
+package com.spring.User;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PlayerApiApplication {
+public class UserApiApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(PlayerApiApplication.class, args);
+        SpringApplication.run(UserApiApplication.class, args);
     }
 
 }

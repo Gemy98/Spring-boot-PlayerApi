@@ -1,4 +1,4 @@
-package com.spring.player.model;
+package com.spring.User.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -12,26 +12,34 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name ="players")
-public class Player {
+@Table(name ="Users")
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "player_id")
+    @Column(name = "User_id")
     private int id;
 
-    @Column(name = "player_name")
+    @Column(name = "User_name")
     private String name;
 
-    @Column(name = "player_number")
+    @Column(name = "User_number")
     private int number;
 
-    @Column(name = "player_address")
+    @Column(name = "User_address")
     private String address;
 
 
-    @Column(name = "player_phone")
+    @Column(name = "User_phone")
     private String phone;
 
 
+    @Getter
+    @Column(name = "isDeleted")
+    private int isDeleted = 0;
+
+
+    public void setIsDeleted(int isDeleted) {
+        this.isDeleted = isDeleted;
+    }
 }

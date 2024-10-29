@@ -1,0 +1,36 @@
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:tns="http://example.com/soap"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             name="MyService"
+             targetNamespace="http://example.com/soap">
+    <message name="GetGreetingRequest">
+        <part name="name" type="xsd:string"/>
+    </message>
+    <message name="GetGreetingResponse">
+        <part name="greeting" type="xsd:string"/>
+    </message>
+    <portType name="MyServicePortType">
+        <operation name="getGreeting">
+            <input message="tns:GetGreetingRequest"/>
+            <output message="tns:GetGreetingResponse"/>
+        </operation>
+    </portType>
+    <binding name="MyServiceBinding" type="tns:MyServicePortType">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="getGreeting">
+            <soap:operation soapAction="http://example.com/soap/getGreeting"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+    </binding>
+    <service name="MyService">
+        <port name="MyServicePort" binding="tns:MyServiceBinding">
+            <soap:address location="http://localhost:8080/ws/my-service"/>
+        </port>
+    </service>
+</definitions>
